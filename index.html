@@ -12,7 +12,7 @@
 			<h1>Einkommenssteuerrechner</h1>
 			<section class="yearOfTax">
 				<!-- //* Auswahl des Steuerjahres -->
-				<h2>Für welches Jahr soll berechnet werden ?</h2>
+				<h2>Für welches Jahr soll die Berechnung erfolgen?</h2>
 
 				<article>
 					<input type="radio" name="year" id="year2020" />
@@ -27,8 +27,7 @@
 			<section>
 				<!-- //* Auswahl zwischen Single und Splittingverfahren -->
 				<h2>
-					Soll die Berechnung für Sie als Einzelperson oder im
-					Splittingverfahren erfolgen?
+					Möchten Sie als Einzelperson oder im Splittingverfahren forfahren?
 				</h2>
 				<input
 					type="radio"
@@ -49,7 +48,7 @@
 
 			<!-- //* Eingabe des Einkommens -->
 			<section class="singleSection">
-				<h2>Ihr zu versteuerndes Gesamteinkommen (in €):</h2>
+				<h2>Geben Sie Ihr Gesamteinkommen (in €) an :</h2>
 				<input
 					type="text"
 					name="income"
@@ -60,7 +59,7 @@
 			</section>
 
 			<section class="coupleSection">
-				<h2>Gesamteinkommen (in €) von Person 1:</h2>
+				<h2>Geben Sie das Gesamteinkommen (in €) von Person 1 an:</h2>
 				<input
 					type="text"
 					name="income"
@@ -69,7 +68,7 @@
 					required
 				/>
 
-				<h2>Gesamteinkommen (in €) von Person 2:</h2>
+				<h2>Geben Sie das Gesamteinkommen (in €) von Person 2 an:</h2>
 				<input
 					type="text"
 					name="income"
@@ -83,15 +82,15 @@
 
 			<!-- //* Ausgabe des eingegebenen Einkommens -->
 			<section>
-				<h2>Herangezogenes Gesamteinkommen:</h2>
+				<h2>Ihr herangezogenes Gesamteinkommen beträgt :</h2>
 				<p id="incomeOutput">0,00€</p>
 			</section>
 
 			<!-- //* Ausgabe der Einkommenssteuer für das gewählte Jahr -->
 			<section>
 				<h2>
-					Einkommenssteuer pro Person für das Jahr
-					<span class="selectedYear"></span>:
+					Die Einkommenssteuer pro Person für das Jahr
+					<span class="selectedYear"></span> beträgt :
 				</h2>
 				<p id="incomeTax">0,00€</p>
 			</section>
