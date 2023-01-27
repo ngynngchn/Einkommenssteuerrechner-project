@@ -38,7 +38,7 @@ section {
 }
 
 form {
-	width: clamp(450px, 600px, 60vw);
+	width: clamp(400px, 600px, 60vw);
 	margin: 5vw auto;
 	background-color: #e5e6eb;
 	border-radius: 13px;
