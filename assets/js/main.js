@@ -127,7 +127,7 @@ function checkYear(income) {
 	}
 }
 
-//* onchange Funktion zum Einblenden und Ausblenden des Gesamteinkommens für Single/Paar
+//* onchange Funktion zum Einblenden und Ausblenden der Sections für Single/Paar
 function showCoupleSection() {
 	if (couple.checked) {
 		coupleSection.classList.add("active");
