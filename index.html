@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Einkommenssteuerrechner</title>
+		<link rel="stylesheet" href="./assets/css/style.css" />
+	</head>
+	<body>
+		<form onsubmit="return false">
+			<h1>Einkommenssteuerrechner</h1>
+			<section class="yearOfTax">
+				<!-- //* Auswahl des Steuerjahres -->
+				<h2>Für welches Jahr soll berechnet werden ?</h2>
+
+				<article>
+					<input type="radio" name="year" id="year2020" />
+					<label for="2020">2020</label>
+					<input type="radio" name="year" id="year2021" />
+					<label for="2021">2021</label>
+					<input type="radio" name="year" id="year2022" checked />
+					<label for="2022">2022</label>
+				</article>
+			</section>
+
+			<section>
+				<!-- //* Auswahl zwischen Single und Splittingverfahren -->
+				<h2>
+					Soll die Berechnung für Sie als Einzelperson oder im
+					Splittingverfahren erfolgen?
+				</h2>
+				<input
+					type="radio"
+					name="type"
+					id="single"
+					checked
+					onchange=" showCoupleSection()"
+				/>
+				<label for="type">Single</label>
+				<input
+					type="radio"
+					name="type"
+					id="couple"
+					onchange=" showCoupleSection()"
+				/>
+				<label for="type">Splittingverfahren</label>
+			</section>
+
+			<!-- //* Eingabe des Einkommens -->
+			<section class="singleSection">
+				<h2>Ihr zu versteuerndes Gesamteinkommen (in €):</h2>
+				<input
+					type="text"
+					name="income"
+					id="incomeInput"
+					placeholder="0.00"
+					required
+				/>
+			</section>
+
+			<section class="coupleSection">
+				<h2>Gesamteinkommen (in €) von Person 1:</h2>
+				<input
+					type="text"
+					name="income"
+					id="incomeInputOne"
+					placeholder="0.00"
+					required
+				/>
+
+				<h2>Gesamteinkommen (in €) von Person 2:</h2>
+				<input
+					type="text"
+					name="income"
+					id="incomeInputTwo"
+					placeholder="0.00"
+					required
+				/>
+			</section>
+
+			<button onclick="calculateIncomeTax()">Steuer berechnen</button>
+
+			<!-- //* Ausgabe des eingegebenen Einkommens -->
+			<section>
+				<h2>Herangezogenes Gesamteinkommen:</h2>
+				<p id="incomeOutput">0,00€</p>
+			</section>
+
+			<!-- //* Ausgabe der Einkommenssteuer für das gewählte Jahr -->
+			<section>
+				<h2>
+					Einkommenssteuer pro Person für das Jahr
+					<span class="selectedYear"></span>:
+				</h2>
+				<p id="incomeTax">0,00€</p>
+			</section>
+		</form>
+
+		<script src="./assets/js/main.js"></script>
+	</body>
+</html>
